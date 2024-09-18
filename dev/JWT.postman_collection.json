@@ -1,0 +1,127 @@
+{
+	"info": {
+		"_postman_id": "ba437099-485c-472c-9236-83df083736e0",
+		"name": "JWT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15895232"
+	},
+	"item": [
+		{
+			"name": "Signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"jon.doe@user.com\",\r\n    \"password\": \"qwerty\",\r\n    \"fullName\": \"Jon Doe\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8005/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8005",
+					"path": [
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"jon.doe@user.com\",\r\n    \"password\": \"qwerty\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8005/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8005",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/users/me",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb24uZG9lQHVzZXIuY29tIiwiaWF0IjoxNzI2NjAwMjEwLCJleHAiOjE3MjY2ODY2MTB9.LMi-7vGCUvhEeIc3Cu-R3Q4GkuX_fUsFjzDGI5D8f0Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8005/users/me",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8005",
+					"path": [
+						"users",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/users",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb24uZG9lQHVzZXIuY29tIiwiaWF0IjoxNzI2NjAwMjEwLCJleHAiOjE3MjY2ODY2MTB9.LMi-7vGCUvhEeIc3Cu-R3Q4GkuX_fUsFjzDGI5D8f0Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8005/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8005",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
